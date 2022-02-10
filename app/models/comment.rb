@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Post < ApplicationRecord
+class Comment < ApplicationRecord
   belongs_to :user, dependent: :destroy
-  has_many :comments
+  belongs_to :post, dependent: :destroy
 end
